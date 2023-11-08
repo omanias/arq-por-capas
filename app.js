@@ -5,6 +5,7 @@ const app = express();
 const port = 3000; // Puedes usar el puerto que desees
 
 app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Importa las rutas
 const toysRoutes = require('./routes/toys');
